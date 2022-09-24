@@ -1,0 +1,33 @@
+---
+title: "High-Throughput - Week 1 Exercise B"
+author: "Wendel-Garcia"
+format: html
+editor: visual
+---
+
+## Negative Binomial Distribution
+
+```{r}
+library(MASS)
+```
+
+### Random Sampling from the distrbution
+
+```{r}
+data <- rnegbin(100, mu = 10, theta = 2)
+data
+```
+
+### Plot Histogram
+
+```{r}
+hist(data)
+```
+
+### Plot Log Histogram
+
+```{r}
+hist(log(data+1))
+```
+
+The mean of the dirstribution is `r mean(data)` and the variance is `r var(data)`
